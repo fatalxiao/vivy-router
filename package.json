@@ -2,7 +2,7 @@
     "name": "vivy-router",
     "author": "liangxiaojun",
     "version": "0.0.5",
-    "description": "vivy async component",
+    "description": "vivy router",
     "main": "./dist/index.js",
     "files": [
         "src",
