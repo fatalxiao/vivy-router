@@ -20,7 +20,8 @@
         "url": "https://github.com/fatalxiao/vivy-router"
     },
     "keywords": [
-        "redux"
+        "redux",
+        "vivy"
     ],
     "license": "MIT",
     "bugs": {
