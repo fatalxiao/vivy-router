@@ -11,7 +11,7 @@
         "README.md"
     ],
     "scripts": {
-        "example:withAsyncComponentPlugin": "webpack-dev-server --open --hot --config examples/withAsyncComponentPlugin/webpack.config.js",
+        "example:withRouterPlugin": "webpack-dev-server --open --hot --config examples/withRouterPlugin/webpack.config.js",
         "build": "gulp",
         "do-publish": "npm run build && npm publish"
     },
