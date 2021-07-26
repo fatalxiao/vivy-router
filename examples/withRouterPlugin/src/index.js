@@ -10,6 +10,12 @@ import {Provider} from 'react-redux';
 import {ConnectedRouter} from 'connected-react-router';
 import {configureRoutes} from './routes';
 
+// Models
+import root from './modules/Root/models/root';
+import a from './modules/A/models/a';
+import b from './modules/B/models/b';
+import c from './modules/C/models/c';
+
 // Import Vivy
 import Vivy from 'vivy';
 import VivyRouter from '../../../src';
@@ -27,6 +33,14 @@ vivy.use(VivyRouter({
 
 // Create store after configuration
 const store = vivy.createStore();
+
+// Register vivy models
+store.registerModels([
+    root,
+    a,
+    b,
+    c
+]);
 
 render(
     <Provider store={store}>

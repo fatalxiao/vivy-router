@@ -8,7 +8,6 @@ import {connect} from 'react-redux';
 
 // Component
 import {NavLink} from 'react-router-dom';
-import PageLoading from 'alcedo-ui/PageLoading';
 
 // Vendors
 import {renderRoutes} from 'react-router-config';
@@ -18,12 +17,9 @@ import './Root.scss';
 
 const Root = ({
     route,
-    menu, activatedMenu, customizedAsyncComponentLoading
+    menu
 }) => (
     <div className="root">
-
-        <PageLoading visible={customizedAsyncComponentLoading}
-                     showStripes={false}/>
 
         <div className="menu">
             <h2>Module Root</h2>
@@ -32,8 +28,7 @@ const Root = ({
                 {
                     menu?.map((item, index) =>
                         <li key={index}>
-                            <NavLink className={item === activatedMenu ? 'activated' : null}
-                                     to={item?.route}>
+                            <NavLink to={item?.route}>
                                 {item?.name}
                             </NavLink>
                         </li>
@@ -53,22 +48,13 @@ Root.propTypes = {
 
     route: PropTypes.object,
 
-    menu: PropTypes.array,
-    activatedMenu: PropTypes.object,
-    customizedAsyncComponentLoading: PropTypes.bool
+    menu: PropTypes.array
 
 };
 
 export default connect(state => ({
 
     // Get menu config from root model
-    menu: state.root.menu,
-
-    // Get activated menu from root model
-    activatedMenu: state.root.activatedMenu,
-
-    // Get async component loading from customized name space model
-    // ( default vivy-async-component model name space is "asyncComponentLoading" )
-    customizedAsyncComponentLoading: state.customizedAsyncComponentLoading
+    menu: state.root.menu
 
 }))(Root);

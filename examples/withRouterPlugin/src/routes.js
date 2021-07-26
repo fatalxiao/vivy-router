@@ -2,8 +2,6 @@
  * @file routes.js
  */
 
-import React from 'react';
-
 // Components
 import Root from './modules/Root/containers/Root';
 import A from './modules/A/containers/A';
@@ -17,16 +15,16 @@ import C from './modules/C/containers/C';
 export function configureRoutes() {
     return [{
         path: '/',
-        component: <Root/>,
+        component: Root,
         routes: [{
             path: '/a',
-            component: <A/>
+            component: A
         }, {
             path: '/b',
-            component: <B/>
+            component: B
         }, {
             path: '/c',
-            component: <C/>
+            component: C
         }]
     }];
 }
