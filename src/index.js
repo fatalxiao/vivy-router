@@ -2,41 +2,36 @@
  * @file index.js
  */
 
-// Models
-import createAsyncComponentLoading from './models/asyncComponentLoading';
-
 // Middlewares
-import createAsyncComponentLoadingMiddleware from './middlewares/AsyncComponentLoadingMiddleware';
-
-// Components
-export AsyncComponent from './components/AsyncComponent';
+import {connectRouter, routerMiddleware} from 'connected-react-router';
 
 /**
- * Default vivy-api options
+ * Default Vivy router options
  * @type {{modelNameSpace: string}}
  */
 const DEFAULT_OPTIONS = {
-    modelNameSpace: 'asyncComponentLoading'
+    modelNameSpace: 'router'
 };
 
 /**
- * Create Vivy async component plugin
+ * Create Vivy router plugin
  * @param options
  * @returns {{}}
  */
-export default function createVivyAsyncComponentPlugin(options = {}) {
+export default function createVivyRouterPlugin(options = {}) {
 
     const op = {...DEFAULT_OPTIONS, ...options};
 
-    const {modelNameSpace} = op;
+    const {modelNameSpace, history} = op;
 
     return {
         extraMiddlewares: [
-            createAsyncComponentLoadingMiddleware(modelNameSpace)
+            routerMiddleware(history)
         ],
-        extraModels: [
-            createAsyncComponentLoading(modelNameSpace)
-        ]
+        extraReducers: {
+            [modelNameSpace]: connectRouter(history)
+        }
+
     };
 
-};
+}
