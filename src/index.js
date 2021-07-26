@@ -2,7 +2,7 @@
  * @file index.js
  */
 
-// Middlewares
+// Vendors
 import {connectRouter, routerMiddleware} from 'connected-react-router';
 
 /**
