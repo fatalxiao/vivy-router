@@ -7,11 +7,9 @@ import {connectRouter, routerMiddleware} from 'connected-react-router';
 
 /**
  * Default Vivy router options
- * @type {{modelNameSpace: string}}
+ * @type {{}}
  */
-const DEFAULT_OPTIONS = {
-    modelNameSpace: 'router'
-};
+const DEFAULT_OPTIONS = {};
 
 /**
  * Create Vivy router plugin
@@ -22,16 +20,15 @@ export default function createVivyRouterPlugin(options = {}) {
 
     const op = {...DEFAULT_OPTIONS, ...options};
 
-    const {modelNameSpace, history} = op;
+    const {history} = op;
 
     return {
         extraMiddlewares: [
             routerMiddleware(history)
         ],
         extraReducers: {
-            [modelNameSpace]: connectRouter(history)
+            router: connectRouter(history)
         }
-
     };
 
 }
