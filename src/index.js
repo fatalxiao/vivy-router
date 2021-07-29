@@ -6,21 +6,19 @@
 import {connectRouter, routerMiddleware} from 'connected-react-router';
 
 /**
- * Default Vivy router options
- * @type {{}}
- */
-const DEFAULT_OPTIONS = {};
-
-/**
  * Create Vivy router plugin
  * @param options
  * @returns {{}}
  */
 export default function createVivyRouterPlugin(options = {}) {
 
-    const op = {...DEFAULT_OPTIONS, ...options};
+    const op = {...options};
 
     const {history} = op;
+
+    if (!history) {
+        console.error('History in options for Vivy router plugin is required.');
+    }
 
     return {
         onCreateStore: store => store.history = history,
