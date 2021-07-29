@@ -23,9 +23,7 @@ export default function createVivyRouterPlugin(options = {}) {
     const {history} = op;
 
     return {
-        extraStoreProps: {
-            history
-        },
+        onCreateStore: store => store.history = history,
         extraMiddlewares: [
             routerMiddleware(history)
         ],
