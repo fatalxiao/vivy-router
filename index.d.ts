@@ -11,4 +11,4 @@ export interface VivyRouterPluginOption {
  * Create Vivy router plugin
  * @param options
  */
-export default function createVivyRouterPlugin(options?: VivyRouterPluginOption);
+export default function createVivyRouterPlugin(options?: VivyRouterPluginOption): Object;
