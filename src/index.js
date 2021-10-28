@@ -10,7 +10,7 @@ import {connectRouter, routerMiddleware} from 'connected-react-router';
  * @param options {Object}
  * @returns {Object}
  */
-export default function createVivyRouterPlugin(options = {}) {
+export default function VivyRouter(options = {}) {
 
     const op = {...options};
 
