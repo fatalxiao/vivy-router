@@ -1,3 +1,8 @@
+/**
+ * ConnectedRouter from "connected-react-router"
+ */
+export {ConnectedRouter} from 'connected-react-router';
+
 export interface VivyRouterPluginOption {
 
     /**

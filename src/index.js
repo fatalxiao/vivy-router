@@ -5,6 +5,9 @@
 // Vendors
 import {connectRouter, routerMiddleware} from 'connected-react-router';
 
+// Export ConnectedRouter from "connected-react-router"
+export {ConnectedRouter} from 'connected-react-router';
+
 /**
  * Create Vivy router plugin
  * @param options {Object}
