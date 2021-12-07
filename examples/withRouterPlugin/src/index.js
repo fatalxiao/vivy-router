@@ -7,7 +7,7 @@ import {render} from 'react-dom';
 import {createBrowserHistory} from 'history';
 import {renderRoutes} from 'react-router-config';
 import {Provider} from 'react-redux';
-import {ConnectedRouter} from 'connected-react-router';
+import {ConnectedRouter} from 'vivy-router';
 import {configureRoutes} from './routes';
 
 // Models
