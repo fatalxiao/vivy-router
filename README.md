@@ -19,6 +19,13 @@
 
 A [Vivy][vivy-url] plugin to handle router based on [connected-react-router][connected-react-router-url].
 
+* [Installation](#installation)
+* [Examples](#examples)
+    * [Examples in repository](#examples-in-repository)
+    * [Complete and real project example](#complete-and-real-project-example)
+* [Documentation](#documentation)
+    * [Basic usage](#basic-usage)
+
 ## Installation
 
 Using npm:
