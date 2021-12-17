@@ -69,10 +69,10 @@ import Vivy from 'vivy';
 import VivyRouter, {ConnectedRouter} from 'vivy-router';
 
 // Import component
-import Root from './path_to_your_Root_component';
+import Root from 'path_to_your_Root_component';
 
 // Import Vivy model
-import yourVivyModel from './path_to_your_vivy_model';
+import yourVivyModel from 'path_to_your_vivy_model';
 
 // Routes config
 const routes = [{
