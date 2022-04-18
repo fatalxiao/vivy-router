@@ -17,7 +17,7 @@ test('Use Vivy Router by memory history', () => {
     const store = vivy.createStore();
 
     expect(
-        store.history
+        store?.history
     ).toEqual(
         history
     );
