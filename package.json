@@ -12,6 +12,7 @@
         "index.d.ts"
     ],
     "scripts": {
+        "test": "cross-env NODE_ENV=test jest test/**.test.js",
         "build": "gulp",
         "do-publish": "npm run build && npm publish"
     },
@@ -58,13 +59,22 @@
         "@babel/preset-react": "^7.16.7",
         "@babel/runtime": "^7.17.9",
         "babel-core": "^7.0.0-bridge.0",
+        "babel-jest": "^27.5.1",
         "core-js": "^3.22.0",
         "cross-env": "^7.0.3",
         "del": "^6.0.0",
         "eslint": "^8.13.0",
+        "eslint-plugin-jest": "^26.1.1",
         "eslint-plugin-react": "^7.29.4",
         "eslint-plugin-react-hooks": "^4.4.0",
         "gulp": "^4.0.2",
-        "gulp-babel": "^8.0.0"
+        "gulp-babel": "^8.0.0",
+        "history": "^4.10.1",
+        "jest": "^27.5.1",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-redux": "^7.2.6",
+        "react-router": "^5.2.1",
+        "vivy": "^2.0.5"
     }
 }
