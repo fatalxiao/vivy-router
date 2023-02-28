@@ -6,7 +6,7 @@ import React from 'react';
 import {createRoot} from 'react-dom/client';
 import {createBrowserHistory} from 'history';
 import {renderRoutes} from 'react-router-config';
-import {Provider} from 'react-redux';
+import {Provider} from 'react-vivy';
 import {configureRoutes} from './routes';
 
 // Models
