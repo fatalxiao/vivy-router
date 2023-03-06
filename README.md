@@ -80,7 +80,7 @@ import yourVivyModel from 'path_to_your_vivy_model';
 const routes = [{
     path: '/',
     component: Root
-}]
+}];
 
 // Create browser history
 const history = createBrowserHistory();
