@@ -1,19 +1,20 @@
 /**
- * @file index.js
+ * @file index.ts
+ * @author Liangxiaojun
  */
 
 // Vendors
 import {connectRouter, routerMiddleware} from 'connected-react-router';
 
-// Export ConnectedRouter from "connected-react-router"
-export {ConnectedRouter} from 'connected-react-router';
+// Types
+import {VivyRouterPluginOption} from './types';
+import {VivyStore} from 'vivy';
 
 /**
  * Create Vivy router plugin
- * @param options {Object}
- * @returns {Object}
+ * @param options
  */
-export default function VivyRouter(options = {}) {
+export default function VivyRouter(options: VivyRouterPluginOption = {}) {
 
     const op = {...options};
 
@@ -24,7 +25,7 @@ export default function VivyRouter(options = {}) {
     }
 
     return {
-        onCreateStore: store => store.history = history,
+        onCreateStore: (store: VivyStore) => store.history = history,
         extraMiddlewares: [
             routerMiddleware(history)
         ],
@@ -34,3 +35,6 @@ export default function VivyRouter(options = {}) {
     };
 
 }
+
+export * from './types';
+export {ConnectedRouter} from 'connected-react-router';
