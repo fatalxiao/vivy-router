@@ -10,6 +10,9 @@ import {connectRouter, routerMiddleware} from 'connected-react-router';
 import {VivyRouterPluginOption} from './types';
 import {VivyStore} from 'vivy';
 
+export * from 'connected-react-router';
+export * from './types';
+
 /**
  * Create Vivy router plugin
  * @param options
@@ -35,6 +38,3 @@ export default function VivyRouter(options: VivyRouterPluginOption = {}) {
     };
 
 }
-
-export * from './types';
-export {ConnectedRouter} from 'connected-react-router';
