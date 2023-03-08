@@ -11,6 +11,7 @@ import {VivyRouterPluginOption} from './types';
 import {VivyStore} from 'vivy';
 
 export * from 'connected-react-router';
+export {ConnectedRouter} from 'connected-react-router';
 export * from './types';
 
 /**
