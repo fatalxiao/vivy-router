@@ -47,6 +47,6 @@
         "react-router": "^5.2.1",
         "react-vivy": "^2.0.0",
         "typescript": "^4.9.5",
-        "vivy": "^3.0.0"
+        "vivy": "^3.0.8"
     }
 }
