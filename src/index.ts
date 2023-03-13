@@ -8,7 +8,7 @@ import {connectRouter, routerMiddleware} from 'connected-react-router';
 
 // Types
 import {VivyRouterPluginOption} from './types';
-import {VivyPlugin, VivyStore} from 'vivy';
+import {VivyPlugin} from 'vivy';
 
 export * from 'connected-react-router';
 export {ConnectedRouter} from 'connected-react-router';
@@ -29,7 +29,7 @@ export default function VivyRouter(options: VivyRouterPluginOption = {}): VivyPl
     }
 
     return {
-        onCreateStore: (store: VivyStore) => store.history = history,
+        onCreateStore: store => store.history = history,
         extraMiddlewares: [
             routerMiddleware(history)
         ],
