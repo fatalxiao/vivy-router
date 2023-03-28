@@ -1,7 +1,7 @@
 {
     "name": "vivy-router",
     "author": "liangxiaojun",
-    "version": "3.1.0",
+    "version": "3.1.1",
     "description": "A router plugin for Vivy based on connected-react-router.",
     "main": "lib/index.js",
     "module": "es/index.js",
