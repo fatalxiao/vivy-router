@@ -1,7 +1,7 @@
 'use strict';
 
 import Vivy from 'vivy';
-import VivyRouter from '../src';
+import VivyRouter from 'src';
 
 import {createMemoryHistory} from 'history';
 
