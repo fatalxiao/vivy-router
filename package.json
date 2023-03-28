@@ -3,6 +3,7 @@
     "author": "liangxiaojun",
     "version": "3.1.0",
     "description": "A router plugin for Vivy based on connected-react-router.",
+    "main": "lib/index.js",
     "module": "es/index.js",
     "types": "es/index.d.ts",
     "files": [
